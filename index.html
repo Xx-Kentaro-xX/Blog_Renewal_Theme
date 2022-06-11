@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>KentaroGram(R)</title>
+    <meta nama="description" content="sample.................." />
+    <link rel="stylesheet" href="/assets/css/sanitize.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <h2 class="header-logo"><a href="#">KentaroGram</a></h2>
+      <nav class="header-nav">
+        <ul class="header-navlist">
+          <li class="header-navitem"><a href="">あああ</a></li>
+          <li class="header-navitem"><a href="">いいい</a></li>
+          <li class="header-navitem"><a href="">ううう</a></li>
+          <li class="header-navitem"><a href="">えええ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <div class="hero">
+      <div id="hero_animation">
+        <h1 class="hero-title">
+          Kentaro<span class="hero-titile orange">Gram</span>
+        </h1>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Article New -->
+    <section class="article-new">
+      <h2 class="article-new-title">新着記事</h2>
+
+      <a class="article-new-block block_1">
+        <div class="article-new-content"></div>
+      </a>
+
+      <a class="article-new-block block_2">
+        <div class="article-new-content"></div>
+      </a>
+
+      <a class="article-new-block block_3">
+        <div class="article-new-content"></div>
+      </a>
+
+      <button class="button-label article-new-open">Open</button>
+      <button class="button-label article-new-close">Close</button>
+      <a class="article-new-list" href="#"
+        ><button class="button-greenback">もっと見る</button></a
+      >
+    </section>
+
+    <hr class="hr-reverse" />
+
+    <!-- about -->
+    <section class="about">
+      <h2>このブログについて</h2>
+      <div class="about-description">
+        <div class="about-blog">This is blog description</div>
+        <div class="about-author">This is author description</div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Article Recommen -->
+    <section class="article-recommend">
+      <h2 class="article-recommend-title">個人的おすすめ記事</h2>
+
+      <a href="" class="article-recommend-block block_1"></a>
+      <a href="" class="article-recommend-block block_2"></a>
+      <a href="" class="article-recommend-block block_3"></a>
+
+      <button class="button-label article-recommend-open">Open</button>
+      <button class="button-label article-recommend-close">Close</button>
+      <a class="article-recommend-list" href="#"
+        ><button class="button-greenback">もっと見る</button></a
+      >
+    </section>
+
+    <hr class="hr-reverse" />
+
+    <!-- Category -->
+    <section class="category">
+      <h2 class="category-title">カテゴリー</h2>
+      <div class="category-container">
+        <a class="category-card">
+          <div class="category-card-img-1"></div>
+          <div class="category-card-name">技術</div>
+        </a>
+        <a class="category-card">
+          <div class="category-card-img-2"></div>
+          <div class="category-card-name even">仕事</div>
+        </a>
+        <a class="category-card">
+          <div class="category-card-img-3"></div>
+          <div class="category-card-name">本</div>
+        </a>
+        <a class="category-card">
+          <div class="category-card-img-4"></div>
+          <div class="category-card-name even">その他もろもろ</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">Copyright © KentaroGram 2021</footer>
+
+    <!-- vanta.js HeroBird -->
+    <script src="/assets/js/vanta.js/three.r119.min.js"></script>
+    <script src="/assets/js/vanta.js/vanta.birds.min.js"></script>
+    <script src="/assets/js/vanta.js/vanta.globe.min.js"></script>
+
+    <script>
+      // Bird animation
+      VANTA.BIRDS({
+        el: "#hero_animation",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundColor: 0xffffff,
+        color1: 0x00a99d,
+        color2: 0x008b8b,
+        colorMode: "lerpGradient",
+        birdSize: 1.5,
+        wingSpan: 24.0,
+        quantity: 4.0,
+      });
+      // Globe animation
+      //   VANTA.GLOBE({
+      //     el: "#hero_animation",
+      //     mouseControls: true,
+      //     touchControls: true,
+      //     gyroControls: false,
+      //     minHeight: 600.00,
+      //     minWidth: 1000.00,
+      //     scale: 1.00,
+      //     scaleMobile: 1.00,
+      //     color: 0x00a99d,
+      //     color2: 0xe6e67a,
+      //     backgroundColor: 0xffffff
+      //   })
+    </script>
+    <!-- JS script -->
+    <script src="/assets/js/scritp.js"></script>
+  </body>
+</html>
