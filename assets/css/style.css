@@ -391,6 +391,33 @@ about-author
   font-size: 20px;
 }
 
+/* 
+pageTopButton
+*/
+.page-top-button {
+  display: none;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  color: #deb887;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 20px;
+  background-color: transparent;
+  border-radius: 25px;
+  transition: color 0.25s;
+}
+
+.page-top-button::before {
+  content: "▲";
+  padding-right: 5px;
+}
+
+.page-top-button:hover {
+  color: #fff;
+  background-color: #deb887;
+}
+
 /*
 footer
 */
