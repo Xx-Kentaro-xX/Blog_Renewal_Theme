@@ -1,3 +1,5 @@
+// 全画面共通JS
+
 // ページトップ戻るボタン制御
 function pageTopButtonControl() {
   try {
