@@ -10,6 +10,45 @@ h2 {
   margin: 40px 0px 20px 0px;
   color: #deb887;
 }
+/* emphasizeは記事を管理画面から書いた際のB(太字)にした際のスタイル */
+/* B(太字)自体は<strong>タグを付与するので、それをscript.jsの中で以下のクラス持ちの<span>タグに置換している */
+.emphasize {
+  font-size: 30px;
+  color: #00a99d;
+  text-decoration: underline;
+  text-decoration-color: #deb887;
+}
+
+/* 目次用スタイル(目次はjsで自動追加) 開始*/
+.single-article-content-description ul {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 50px auto;
+  padding: 0;
+  list-style: none;
+  font-size: 24px;
+}
+.single-article-content-description ul::before {
+  content: "目次";
+  color: #00a99d;
+  font-size: 42px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 40px;
+}
+.single-article-content-description li {
+  position: relative;
+  padding-bottom: 20px;
+}
+.single-article-content-description li a {
+  color: #000;
+}
+.single-article-content-description li a:hover {
+  color: #deb887;
+  font-weight: bold;
+}
+/* 目次用スタイル(目次はjsで自動追加) 終わり */
 
 .single-article-title {
   position: absolute;
@@ -23,7 +62,7 @@ h2 {
 }
 
 .single-article-container {
-  height: 800px;
+  height: auto;
   display: grid;
   grid-template-columns: 75% 35%;
 }
@@ -38,17 +77,20 @@ h2 {
 }
 
 .single-article-thumbnail {
-  height: auto;
   width: 75%;
   border-radius: 25px;
 }
 
 .single-article-content-description {
-  height: auto;
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.single-article-content-description img {
+  height: 400px;
+  width: 600px;
 }
 
 .single-article-side-bar {
