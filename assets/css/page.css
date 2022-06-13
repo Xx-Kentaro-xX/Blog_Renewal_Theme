@@ -3,7 +3,6 @@
 .single-article-title {
   color: #deb887;
 }
-
 .single-article-container {
   display: flex;
   justify-content: center;
@@ -11,12 +10,29 @@
   width: 80%;
   margin: 0 auto;
 }
-
 .single-article-content-description {
   width: 70%;
   align-items: center;
 }
-
 .single-article-content-description p {
   margin-right: auto;
+}
+
+/* style.cssで定義されているhrとhr-reverseのスタイルを逆にする */
+.hr-reverse {
+  height: 5px;
+  margin: 0px;
+  border: none;
+  background: #00a99d;
+  background-image: -webkit-linear-gradient(left, #00a99d 40%, #deb887 50%);
+  background-image: -moz-linear-gradient(left, #00a99d 40%, #deb887 50%);
+  background-image: -ms-linear-gradient(left, #00a99d 40%, #deb887 50%);
+  background-image: -o-linear-gradient(left, #00a99d 40%, #deb887 50%);
+}
+
+hr {
+  background-image: -webkit-linear-gradient(left, #deb887 50%, #00a99d 60%);
+  background-image: -moz-linear-gradient(left, #deb887 50%, #00a99d 60%);
+  background-image: -ms-linear-gradient(left, #deb887 50%, #00a99d 60%);
+  background-image: -o-linear-gradient(left, #deb887 50%, #00a99d 60%);
 }

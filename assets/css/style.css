@@ -56,10 +56,10 @@ hr {
   margin: 0px;
   border: none;
   background: #00a99d;
-  background-image: -webkit-linear-gradient(left, #00a99d 40%, #deb887 50%);
-  background-image: -moz-linear-gradient(left, #00a99d 40%, #deb887 50%);
-  background-image: -ms-linear-gradient(left, #00a99d 40%, #deb887 50%);
-  background-image: -o-linear-gradient(left, #00a99d 40%, #deb887 50%);
+  background-image: -webkit-linear-gradient(left, #00a99d 50%, #deb887 60%);
+  background-image: -moz-linear-gradient(left, #00a99d 50%, #deb887 60%);
+  background-image: -ms-linear-gradient(left, #00a99d 50%, #deb887 60%);
+  background-image: -o-linear-gradient(left, #00a99d 50%, #deb887 60%);
 }
 
 .hr-reverse {
@@ -281,21 +281,13 @@ article-area-container
   overflow: hidden;
 }
 
-/* .article-block:nth-child(1):before {
-  content: "";
-  height: 50px;
-  width: 50px;
-  background: url("/assets/img/article-ranking-icon/gold.png");
-  background-size: contain;
-} */
-
 .article-thumbnail {
   height: inherit;
   width: inherit;
 }
 
 .article-thumbnail:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .article-description {
