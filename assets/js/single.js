@@ -66,7 +66,7 @@ function autoIndexCreation() {
       // <li>の中に入れ込む<a>タグを生成
       let indexItemAnchor = document.createElement("a");
       // <a>タグのテキストにhtml上にあるh2のテキストと同じものを指定する
-      indexItemAnchor.innerText = indexItems[i].innerText;
+      indexItemAnchor.innerText = i + 1 + ". " + indexItems[i].innerText;
       // <a>タグのhref(遷移先)としてh2のidを指定する
       indexItemAnchor.setAttribute("href", "#" + indexItems[i].id);
       // <li>の中に<a>を子要素として追加
@@ -74,6 +74,14 @@ function autoIndexCreation() {
       // <ul>の中に<li>を子要素として追加
       indexUl.appendChild(indexItem);
     }
+
+    // 目次を挟む横線として<hr>を生成
+    let startHr = document.createElement("hr");
+    // <ul>の直後にまず最初の<hr>を入れる
+    indexUl.prepend(startHr);
+    let endHr = document.createElement("hr");
+    endHr.className = "hr-reverse";
+    indexUl.appendChild(endHr);
 
     // 親要素の先頭要素として<ul>を追加
     PARENT.prepend(indexUl);

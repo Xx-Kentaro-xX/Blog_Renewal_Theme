@@ -21,25 +21,30 @@ h2 {
 
 /* 目次用スタイル(目次はjsで自動追加) 開始*/
 .single-article-content-description ul {
-  width: 100%;
+  width: 80%;
   display: block;
   text-align: center;
   margin: 50px auto;
   padding: 0;
   list-style: none;
-  font-size: 24px;
+  font-size: 22px;
+  text-align: center;
 }
 .single-article-content-description ul::before {
   content: "目次";
   color: #00a99d;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
   display: block;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .single-article-content-description li {
-  position: relative;
+  margin: 0px 30px;
   padding-bottom: 20px;
+  text-align: left;
+}
+.single-article-content-description li:nth-child(2) {
+  padding-top: 20px;
 }
 .single-article-content-description li a {
   color: #000;
@@ -64,7 +69,8 @@ h2 {
 .single-article-container {
   height: auto;
   display: grid;
-  grid-template-columns: 75% 35%;
+  grid-template-columns: 80% 20%;
+  min-width: 1000px;
 }
 
 .single-article-content {
