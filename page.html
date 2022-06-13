@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/sanitize.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/single.css">
+    <link rel="stylesheet" href="/assets/css/page.css">
   <body>
     <!-- header -->
     <header class="header">
@@ -26,7 +27,7 @@
     <!-- hero -->
     <div class="hero">
       <div id="hero_animation">
-        <h1 class="single-article-title">記事タイトル</h1>
+        <h1 class="single-article-title">固定記事タイトル</h1>
       </div>
     </div>
 
@@ -34,8 +35,6 @@
 
     <section class="single-article-container">
       <div class="single-article-content">
-        <!-- サムネイル画像 -->
-        <img src="https://dummyimage.com/200x100/000/fff" alt="" class="single-article-thumbnail">
         <!-- 記事の内容 -->
         <div class="single-article-content-description">
 
@@ -51,18 +50,6 @@
           <h2>いいいいいいいいいいいいいいいいいい</h2>
         </div>
       </div>
-      <div class="single-article-side-bar">
-        <div class="single-article-side-bar-title">
-          この記事の情報
-        </div>
-        <div class="single-article-side-bar-info">
-          <p>投稿日: </p>
-          <p>最終更新日: </p>
-          <br>
-          <p>カテゴリー:<br> </p>
-          <p>タグ: <br></p>
-        </div>
-      </div>
     </section>
 
     <hr class="hr-reverse" />
@@ -71,10 +58,10 @@
 
     <footer class="footer">Copyright © KentaroGram 2021</footer>
 
-    <!-- vanta.js -->
+    <!-- vanta.js HeroBird -->
     <script src="/assets/js/vanta.js/three.r119.min.js"></script>
     <script src="/assets/js/vanta.js/vanta.globe.min.js"></script>
-
+ 
     <script>
       // Globe animation
       VANTA.GLOBE({
@@ -86,14 +73,13 @@
         minWidth: 1000.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0x00a99d,
-        color2: 0xdeb887,
+        color: 0xdeb887,
+        color2: 0x00a99d,
         backgroundColor: 0xffffff,
         size: 1.3
       });
     </script>
     <!-- JS script -->
     <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/single.js"></script>
   </body>
 </html>

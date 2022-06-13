@@ -1,0 +1,22 @@
+/* single.cssをベースに固定ページにだけ適応したい差分のスタイルだけをここで定義！ */
+
+.single-article-title {
+  color: #deb887;
+}
+
+.single-article-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.single-article-content-description {
+  width: 70%;
+  align-items: center;
+}
+
+.single-article-content-description p {
+  margin-right: auto;
+}
