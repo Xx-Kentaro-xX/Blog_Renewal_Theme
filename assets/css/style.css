@@ -69,6 +69,20 @@ hr {
   background-image: -o-linear-gradient(left, #deb887 40%, #00a99d 50%);
 }
 
+.article-post-day {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #deb887;
+}
+
+.article-post-day::before {
+  content: "<-- ";
+}
+.article-post-day::after {
+  content: " -->";
+}
+
 /* 
 header
 */
@@ -228,12 +242,6 @@ article
   min-width: 1000px;
 }
 
-.article-new-list {
-  position: absolute;
-  bottom: 50px;
-  right: 100px;
-}
-
 .article-new-row {
   height: 300px;
   width: 100%;
@@ -280,11 +288,17 @@ article
   text-align: center;
 }
 
+.article-new-list {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+}
+
 /* モバイル用CSS */
 @media screen and (max-width: 768px) {
   .article-new {
     min-width: 100%;
-    height: 950px;
+    height: 1100px;
   }
   .article-new-title {
     font-size: 36px;
