@@ -88,7 +88,27 @@ function autoIndexCreation() {
   } catch (e) {}
 }
 
+// ヘッダーロゴ非表示制御(記事を読む際に邪魔になるため)
+function headerLogoMobileControl() {
+  try {
+    let target = document.querySelector(".header-logo");
+    let target_nav = document.querySelector(".header-nav");
+
+    window.addEventListener("scroll", function () {
+      let currentScrollY = window.scrollY;
+      if (currentScrollY > 300) {
+        target.style.display = "none";
+        target_nav.style.display = "none";
+      } else {
+        target.style.display = "block";
+        target_nav.style.display = "block";
+      }
+    });
+  } catch (e) {}
+}
+
 // 呼び出し
 replaceStrong();
 autoAnchor();
 autoIndexCreation();
+headerLogoMobileControl();

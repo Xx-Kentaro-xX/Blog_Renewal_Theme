@@ -84,6 +84,7 @@ header
   min-width: 1000px;
   margin-bottom: 40px;
 }
+
 .header-logo {
   margin: 0;
   padding: 0px 20px;
@@ -98,6 +99,19 @@ header
   color: #deb887;
 }
 
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .header {
+    min-width: 100%;
+  }
+  .header-logo {
+    padding: 0px 10px;
+  }
+  .header-logo > a {
+    font-size: 28px;
+  }
+}
+
 /* .header-nav {
 } */
 .header-navlist {
@@ -106,6 +120,11 @@ header
   justify-content: space-evenly;
   align-items: center;
 }
+
+.header-navlist > li {
+  margin: 0px;
+}
+
 .header-navitem {
   margin: 0 20px;
 }
@@ -124,10 +143,16 @@ header
   background-color: #00a99d;
 }
 
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .header-navlist {
+    display: none;
+  }
+}
+
 /* 
 hero 
 */
-
 #hero_animation {
   height: 600px;
   width: 100vw;
@@ -149,19 +174,47 @@ hero
   color: #deb887;
 }
 
-/* 
-about 
-*/
-.about-blog {
-  height: auto;
-  background-color: rgba(250, 250, 210, 0.7);
-  padding-bottom: 20px;
-  min-width: 1000px;
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  #hero_animation {
+    min-width: 100%;
+    height: 400px;
+  }
+  .hero-title {
+    font-size: 42px;
+    top: 75%;
+    left: 35%;
+  }
 }
 
-.about-blog-description {
-  padding: 30px;
-  font-size: 20px;
+/* 
+mobile-nav
+*/
+.mobile-nav {
+  display: none;
+}
+
+.mobile-hr {
+  display: none;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+    background-color: #fafad2b3;
+  }
+  .mobile-nav-container {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    font-size: 18px;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .mobile-hr {
+    display: block;
+  }
 }
 
 /* 
@@ -202,7 +255,7 @@ article
 }
 
 .article-new-img-container {
-  height: 150px;
+  height: 166px;
   width: 250px;
   margin: 10px 0px;
   border-radius: 10px;
@@ -215,15 +268,95 @@ article
 }
 
 .article-new-thumbnail:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .article-new-description {
   color: #00a99d;
   height: 100px;
+  width: 250px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .article-new {
+    min-width: 100%;
+    height: 950px;
+  }
+  .article-new-title {
+    font-size: 36px;
+  }
+  .article-new-row {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .article-new-row:nth-child(2) {
+    display: none;
+    justify-content: flex-start;
+  }
+  .article-new-img-container {
+    height: 132px;
+    width: 200px;
+  }
+  .article-new-description {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+  }
+  .article-new-list {
+    right: 130px;
+  }
+}
+
+/* 
+about 
+*/
+.about-blog {
+  height: auto;
+  background-color: #fafad2b3;
+  padding-bottom: 20px;
+  min-width: 1000px;
+}
+
+.about-blog-description {
+  padding: 30px;
   font-size: 20px;
 }
 
+.about-blog-emphasize {
+  color: #00a99d;
+  font-size: 36px;
+}
+
+.about-blog-welcome {
+  display: flex;
+  justify-content: center;
+}
+
+.about-blog-welcome img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .about-blog {
+    min-width: 100%;
+  }
+  .about-blog-title {
+    font-size: 36px;
+  }
+  .about-blog-description {
+    font-size: 18px;
+    padding: 10px 5px;
+  }
+  .about-blog-emphasize {
+    font-size: 24px;
+  }
+}
 /*  
 article-area-container
 */
@@ -262,19 +395,77 @@ article-area-container
   align-items: center;
 }
 
-.article-block {
+.article-pickup-block {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  position: relative;
   height: auto;
   width: auto;
   margin: 20px;
   border-radius: 25px;
 }
 
+.article-pickup-block:before {
+  content: "Pick Up!";
+  color: orange;
+  font-size: 42px;
+  font-weight: bold;
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  top: 35px;
+  left: -120px;
+  cursor: auto;
+  transform: rotate(-15deg);
+  text-shadow: 1px 1px 0 gray, 2px 2px 0 gray;
+}
+
+.article-ranking-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  height: auto;
+  width: auto;
+  margin: 20px;
+  border-radius: 25px;
+}
+
+.article-ranking-block:before {
+  content: "";
+  font-size: 72px;
+  font-weight: bold;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 35px;
+  left: -75px;
+  cursor: auto;
+  text-shadow: 1px 1px 0 gray, 2px 2px 0 gray, -1px -1px 0 gray;
+}
+
+.article-ranking-block:nth-child(1):before {
+  content: "1";
+  color: gold;
+}
+.article-ranking-block:nth-child(2):before {
+  content: "2";
+  color: silver;
+}
+.article-ranking-block:nth-child(3):before {
+  content: "3";
+  color: brown;
+}
+
+.article-ranking .article-block {
+  background: #00a99d;
+}
+
 .article-img-container {
-  height: 150px;
+  height: 166px;
   width: 250px;
   margin: 10px 0px;
   border-radius: 10px;
@@ -287,18 +478,52 @@ article-area-container
 }
 
 .article-thumbnail:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .article-description {
   color: #00a99d;
   height: 100px;
+  width: 250px;
   font-size: 20px;
+  text-align: center;
 }
 
 .article-list-button {
   margin: 30px 0;
   display: block;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .article-area-container {
+    min-width: 100%;
+    grid-template-columns: none;
+  }
+  .article-title {
+    font-size: 36px;
+  }
+  .article-pickup {
+    display: none;
+  }
+  .article-ranking {
+    border: none;
+  }
+  .article-ranking-block {
+    margin-top: 50px;
+  }
+  .article-img-container {
+    height: 132px;
+    width: 200px;
+  }
+  .article-ranking-block:before {
+    font-size: 42px;
+  }
+  .article-description {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+  }
 }
 
 /* 
@@ -336,28 +561,32 @@ catagory
 }
 
 .category-card-img-1 {
-  background-image: url("/assets/img/category-icon/computing.png");
+  /* Wordpressの仕様上、phpのタグをCSSで指定できないのでimageの記述はhtmlに移動 */
+  /* background-image: url("./assets/img/category-icon/computing.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-card-img-2 {
-  background-image: url("/assets/img/category-icon/stay-at-home.png");
+  /* Wordpressの仕様上、phpのタグをCSSで指定できないのでimageの記述はhtmlに移動 */
+  /* background-image: url("./assets/img/category-icon/stay-at-home.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-card-img-3 {
-  background-image: url("/assets/img/category-icon/read.png");
+  /* Wordpressの仕様上、phpのタグをCSSで指定できないのでimageの記述はhtmlに移動 */
+  /* background-image: url("./assets/img/category-icon/read.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-card-img-4 {
-  background-image: url("/assets/img/category-icon/machine.png");
+  /* Wordpressの仕様上、phpのタグをCSSで指定できないのでimageの記述はhtmlに移動 */
+  /* background-image: url("./assets/img/category-icon/machine.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -367,13 +596,55 @@ catagory
   box-shadow: inset 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+.category-mobile-container {
+  display: none;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .category {
+    min-width: 100%;
+    height: 600px;
+  }
+  .category-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  .category-container {
+    display: none;
+  }
+  .category-card {
+    height: 150px;
+    width: 150px;
+  }
+  .category-mobile-container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-items: flex-start;
+  }
+  .category-mobile-row_1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .category-mobile-row_2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .category-card {
+    grid-template-rows: 70% 30%;
+  }
+}
+
 /* 
 about-author
 */
 
 .about-author {
   height: auto;
-  background-color: rgba(250, 250, 210, 0.7);
+  background-color: #fafad2b3;
   padding-bottom: 20px;
   min-width: 1000px;
 }
@@ -381,8 +652,63 @@ about-author
 .about-author-description {
   padding: 30px;
   font-size: 20px;
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
 
+.about-author-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-author-img img {
+  height: 300px;
+  width: 300px;
+}
+
+.about-author-name {
+  font-size: 36px;
+  margin: 0px;
+}
+
+.profile-item {
+  color: #00a99d;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.about-author-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.about-author-more {
+  margin-right: 50px;
+}
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .about-author {
+    min-width: 100%;
+  }
+  .about-author-title {
+    font-size: 36px;
+  }
+  .about-author-description {
+    font-size: 18px;
+    padding: 10px 5px;
+  }
+  .about-author-description {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-author-button-container {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .about-author-more {
+    margin-right: 0px;
+  }
+}
 /* 
 pageTopButton
 */
@@ -410,6 +736,14 @@ pageTopButton
   background-color: #deb887;
 }
 
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .page-top-button:hover {
+    color: #deb887;
+    background-color: transparent;
+  }
+}
+
 /*
 footer
 */
@@ -423,4 +757,12 @@ footer
   font-size: 24px;
   font-weight: bold;
   min-width: 1000px;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .footer {
+    min-width: 100%;
+    font-size: 18px;
+  }
 }

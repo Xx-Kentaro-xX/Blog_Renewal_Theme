@@ -17,6 +17,12 @@
 .single-article-content-description p {
   margin-right: auto;
 }
+/* モバイル用CSS (single.cssの方でモバイル用スタイルがほとんど当たっているのでこちらでの定義は最小限で良い) */
+@media screen and (max-width: 768px) {
+  .single-article-title {
+    color: #00a99d;
+  }
+}
 
 /* style.cssで定義されているhrとhr-reverseのスタイルを逆にする */
 .hr-reverse {

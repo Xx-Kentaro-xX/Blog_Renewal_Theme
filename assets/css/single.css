@@ -7,16 +7,28 @@ p {
 /* h2は記事を管理画面から書いた際の見出し(h2) */
 h2 {
   font-size: 42px;
-  margin: 40px 0px 20px 0px;
+  margin: 80px 0px 20px 0px;
   color: #deb887;
 }
 /* emphasizeは記事を管理画面から書いた際のB(太字)にした際のスタイル */
 /* B(太字)自体は<strong>タグを付与するので、それをscript.jsの中で以下のクラス持ちの<span>タグに置換している */
 .emphasize {
-  font-size: 30px;
+  font-size: 26px;
   color: #00a99d;
   text-decoration: underline;
   text-decoration-color: #deb887;
+}
+
+.mobile-single-bar {
+  display: none;
+}
+
+.mobile-single-hr {
+  display: none;
+  background-image: -webkit-linear-gradient(left, #deb887 40%, #00a99d 50%);
+  background-image: -moz-linear-gradient(left, #deb887 40%, #00a99d 50%);
+  background-image: -ms-linear-gradient(left, #deb887 40%, #00a99d 50%);
+  background-image: -o-linear-gradient(left, #deb887 40%, #00a99d 50%);
 }
 
 /* 目次用スタイル(目次はjsで自動追加) 開始*/
@@ -57,11 +69,11 @@ h2 {
 
 .single-article-title {
   position: absolute;
-  width: 500px;
+  width: 50%;
   top: 40%;
-  left: 30%;
+  left: 35%;
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 42px;
   color: #00a99d;
   word-break: normal;
 }
@@ -95,7 +107,7 @@ h2 {
 }
 
 .single-article-content-description img {
-  height: 400px;
+  height: auto;
   width: 600px;
 }
 
@@ -114,4 +126,47 @@ h2 {
   font-size: 18px;
   padding-left: 10px;
   word-break: normal;
+}
+
+/* モバイル用CSS */
+@media screen and (max-width: 768px) {
+  .mobile-single-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+  .mobile-single-bar > p {
+    font-size: 18px;
+    margin: 5px 0px;
+  }
+  .mobile-single-hr {
+    display: block;
+  }
+  .single-article-content-description {
+    width: 100%;
+  }
+  .single-article-content-description ul {
+    width: 100%;
+    font-size: 18px;
+  }
+  .single-article-container {
+    min-width: 100%;
+    display: flex;
+  }
+  .single-article-title {
+    height: auto;
+    width: 70%;
+    margin: 0;
+    font-size: 36px;
+    color: #deb887;
+    transform: none;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+  }
+  .single-article-side-bar {
+    display: none;
+  }
 }
