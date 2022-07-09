@@ -43,6 +43,7 @@
               <?php $img = thumbnail_check(get_the_ID()); ?>
               <img src="<?php echo $img[0]; ?>" alt="<?php the_title(); ?>" class="article-new-thumbnail" />
             </div>
+            <p class="article-post-day"><?php the_time('Y年m月d日'); ?></p>
             <div class="article-new-description"><?php the_title(); ?></div>
           </a>
         <? endfor; ?>
@@ -55,12 +56,16 @@
               <?php $img = thumbnail_check(get_the_ID()); ?>
               <img src="<?php echo $img[0]; ?>" alt="<?php the_title(); ?>" class="article-new-thumbnail" />
             </div>
+            <p class="article-post-day"><?php the_time('Y年m月d日'); ?></p>
             <div class="article-new-description"><?php the_title(); ?></div>
           </a>
         <? endfor; ?>
       </div>
-
-      <a class="article-new-list" href="/all"><button class="button-greenback">もっと見る</button></a>
+      <div class="article-new-list-container">
+        <a class="article-new-list" href="/all">
+          <button class="button-greenback">もっと見る</button>
+        </a>
+      </div>
     </section>
   <?php endif; ?>
 
@@ -146,6 +151,7 @@
                 <?php $img = thumbnail_check(get_the_ID()); ?>
                 <img src="<?php echo $img[0]; ?>" alt="<?php the_title(); ?>" class="article-thumbnail" />
               </div>
+              <p class="article-post-day">投稿日: <?php the_time('Y年m月d日'); ?></p>
               <div class="article-description"><?php the_title(); ?></div>
             </a>
             <?php wp_reset_postdata(); ?>
@@ -179,6 +185,7 @@
                 <?php $img = thumbnail_check(get_the_ID()); ?>
                 <img src="<?php echo $img[0]; ?>" alt="<?php the_title(); ?>" class="article-thumbnail" />
               </div>
+              <p class="article-post-day"><?php the_time('Y年m月d日'); ?></p>
               <div class="article-description"><?php the_title(); ?></div>
             </a>
             <?php wp_reset_postdata(); ?>
