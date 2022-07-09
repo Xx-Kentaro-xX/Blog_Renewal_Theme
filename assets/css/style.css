@@ -260,6 +260,7 @@ article
   margin: 10px 0px;
   border-radius: 10px;
   overflow: hidden;
+  border: #00a99d 3px solid;
 }
 
 .article-new-thumbnail {
@@ -470,6 +471,7 @@ article-area-container
   margin: 10px 0px;
   border-radius: 10px;
   overflow: hidden;
+  border: #00a99d 3px solid;
 }
 
 .article-thumbnail {
