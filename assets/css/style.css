@@ -307,7 +307,7 @@ article
     flex-direction: column;
     justify-content: flex-start;
   }
-  .article-new-row:nth-child(2) {
+  .article-new-row:nth-child(3) {
     display: none;
     justify-content: flex-start;
   }
