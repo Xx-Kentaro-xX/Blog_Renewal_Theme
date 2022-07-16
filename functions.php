@@ -10,6 +10,7 @@ add_action('init', function () {
       'title',
       'editor',
       'author',
+      'excerpt',
       'thumbnail',
       'custom-fields',
       'revision'
@@ -41,6 +42,7 @@ add_action('init', function () {
       'title',
       'editor',
       'author',
+      'excerpt',
       'thumbnail',
       'custom-fields',
       'revision'
@@ -72,6 +74,7 @@ add_action('init', function () {
       'title',
       'editor',
       'author',
+      'excerpt',
       'thumbnail',
       'custom-fields',
       'revision'
