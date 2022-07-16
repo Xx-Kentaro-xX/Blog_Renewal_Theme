@@ -172,12 +172,7 @@ function manage_posts_columns($columns)
 function add_column($column_name, $post_id)
 {
   if ($column_name == 'post_views_count') {
-    $stitle = get_post_meta($post_id, 'post_views_count', true);
-  }
-  if (isset($stitle) && $stitle) {
-    $title_label =  attribute_escape($stitle);
-  } else {
-    $title_label =  __('None');
+    echo get_post_meta($post_id, 'post_views_count', true);
   }
 }
 add_filter('manage_posts_columns', 'manage_posts_columns');
