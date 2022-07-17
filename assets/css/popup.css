@@ -1,0 +1,74 @@
+.popup-background {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  width: 100%;
+}
+
+.popup-background.hidden {
+  display: none;
+}
+
+.popup-area {
+  position: absolute;
+  border-radius: 25px;
+  background-color: white;
+  z-index: 51;
+  padding-bottom: 5%;
+}
+
+.closebutton-container {
+  padding: 10px 20px;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-button {
+  background-color: #00a99d;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px 5px;
+  box-shadow: 5px 5px rgb(0 0 0 / 20%);
+}
+
+.close-button:hover {
+  box-shadow: inset 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.policy-sentences {
+  margin: 0 auto;
+  height: 90%;
+  width: 90%;
+  padding: 20px;
+  font-size: 20px;
+  /*Firefox対応のスクロールバー非表示*/
+  scrollbar-width: none;
+}
+
+/* Chrome, Safari, Edgeでスクロールバー非表示 */
+.policy-sentences::-webkit-scrollbar {
+  display: none;
+}
+
+.policy-sentences h2 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .policy-sentences {
+    font-size: 16px;
+  }
+  .policy-sentences h2 {
+    font-size: 20px;
+  }
+}

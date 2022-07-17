@@ -2,4 +2,13 @@
 
   <button class="page-top-button">ページトップ</button>
 
-  <footer class="footer">Copyright © KentaroGram 2021</footer>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="privacy-policy">
+        免責事項・プライバシーポリシー
+      </div>
+      <div class="copyright">
+        Copyright © KentaroGram 2021
+      </div>
+    </div>
+  </footer>

@@ -286,6 +286,9 @@
     </div>
   </section>
 
+  <!-- プライバシーポリシー・免責事項ポップアップ用パーツ読み込み -->
+  <?php get_template_part('sub_parts/popup'); ?>
+
   <!-- ページフッター読み込み -->
   <?php get_template_part('sub_parts/page_footer'); ?>
 

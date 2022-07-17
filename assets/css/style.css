@@ -52,6 +52,7 @@ button {
 }
 
 hr {
+  min-width: 1000px;
   height: 5px;
   margin: 0px;
   border: none;
@@ -81,6 +82,12 @@ hr {
 }
 .article-post-day::after {
   content: " -->";
+}
+
+@media screen and (max-width: 768px) {
+  hr {
+    min-width: 100%;
+  }
 }
 
 /* 
@@ -766,14 +773,20 @@ footer
 */
 
 .footer {
-  height: 75px;
+  height: 200px;
   padding-top: 25px;
   background-color: #00a99d;
   text-align: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   min-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.privacy-policy {
+  cursor: pointer;
 }
 
 /* モバイル用CSS */

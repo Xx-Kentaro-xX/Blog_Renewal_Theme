@@ -45,5 +45,7 @@
 <!-- 全画面共通CSS -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sanitize.css" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" />
+<!-- プライバシーポリシー・免責事項ポップアップ用 css -->
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/popup.css" />
 
 <?php wp_head(); ?>
