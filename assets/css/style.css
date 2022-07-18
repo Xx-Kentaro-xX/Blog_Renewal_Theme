@@ -400,6 +400,7 @@ article-area-container
   height: auto;
   width: 100%;
   min-width: 1000px;
+  margin-top: 70px;
   padding: 20px 30px;
 }
 
@@ -534,6 +535,7 @@ article-area-container
   .article-area-container {
     min-width: 100%;
     grid-template-columns: none;
+    margin-top: 50px;
   }
   .article-title {
     font-size: 36px;
@@ -566,7 +568,7 @@ article-area-container
 catagory
 */
 .category {
-  height: 400px;
+  height: 350px;
   min-width: 1000px;
 }
 
