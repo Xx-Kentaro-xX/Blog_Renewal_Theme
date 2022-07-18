@@ -20,6 +20,14 @@ function pageTopButtonControl() {
   } catch (e) {}
 }
 
+// 呼び出し
+pageTopButtonControl();
+
+// ヘッダーに背景色をつけて最上部に来るようにしたので、高さに応じてロゴを消す処理が不要になったのでコメントアウト(2022/7/18)
+// headerLogoPageTopControl();
+// headerLogoMobileControl();
+
+// 未使用関数
 // ヘッダーロゴ非表示制御[スマホの場合](アンカーリンクで飛んだ時にロゴが遷移先のタイトルとかぶるため)
 function headerLogoMobileControl() {
   try {
@@ -39,7 +47,6 @@ function headerLogoMobileControl() {
     });
   } catch (e) {}
 }
-
 // ヘッダーロゴがトップページを読むときに邪魔なので一定のスクロール量を超えたらhtmlを空にして、クリックできなくする
 function headerLogoPageTopControl() {
   try {
@@ -57,28 +64,3 @@ function headerLogoPageTopControl() {
     });
   } catch (e) {}
 }
-
-// ヘッダーロゴ非表示制御[スマホの場合](アンカーリンクで飛んだ時にロゴが遷移先のタイトルとかぶるため)
-function headerLogoMobileControl() {
-  try {
-    let target = document.querySelector(".header-logo");
-
-    window.addEventListener("scroll", function () {
-      let screenWidth = window.innerWidth;
-      // 画面は幅が769未満(=768以内)の場合
-      if (screenWidth < 769) {
-        let currentScrollY = window.scrollY;
-        if (currentScrollY > 300) {
-          target.style.display = "none";
-        } else {
-          target.style.display = "block";
-        }
-      }
-    });
-  } catch (e) {}
-}
-
-// 呼び出し
-pageTopButtonControl();
-headerLogoPageTopControl();
-headerLogoMobileControl();

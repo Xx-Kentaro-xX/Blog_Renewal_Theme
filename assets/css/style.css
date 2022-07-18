@@ -84,9 +84,17 @@ hr {
   content: " -->";
 }
 
+.anchor-adjust-div {
+  width: 100%;
+  height: 70px;
+}
+
 @media screen and (max-width: 768px) {
   hr {
     min-width: 100%;
+  }
+  .anchor-adjust-div {
+    height: 50px;
   }
 }
 
@@ -98,12 +106,14 @@ header
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  height: 70px;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
   min-width: 1000px;
   margin-bottom: 40px;
+  background-color: #00a99d;
 }
 
 .header-logo {
@@ -113,6 +123,7 @@ header
 
 .header-logo > a {
   font-size: 40px;
+  color: #fff;
   transition: color 0.25s;
 }
 
@@ -124,6 +135,7 @@ header
 @media screen and (max-width: 768px) {
   .header {
     min-width: 100%;
+    height: 50px;
   }
   .header-logo {
     padding: 0px 10px;
@@ -151,6 +163,7 @@ header
 }
 
 .header-navitem > a {
+  color: #fff;
   padding: 5px 20px;
   font-size: 20px;
   background-color: transparent;
@@ -160,8 +173,7 @@ header
 }
 
 .header-navitem > a:hover {
-  color: #fff;
-  background-color: #00a99d;
+  background-color: #deb887;
 }
 
 /* モバイル用CSS */
@@ -183,7 +195,7 @@ hero
 
 .hero-title {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 30%;
   transform: translate(-50%, -50%);
   font-size: 100px;
