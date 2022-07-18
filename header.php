@@ -45,7 +45,7 @@
 <!-- favicon -->
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="<?php echo get_template_directory_uri(); ?>/assets/imgandroid-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="<?php echo get_template_directory_uri(); ?>/assets/img/android-touch-icon.png">
 <!-- 全画面共通CSS -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sanitize.css" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" />
