@@ -42,6 +42,10 @@
 
   gtag('config', 'G-WKDXLXHL04');
 </script>
+
+<!-- Google AdSense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7122845678164047" crossorigin="anonymous"></script>
+
 <!-- favicon -->
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/apple-touch-icon.png">
