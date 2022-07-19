@@ -59,13 +59,13 @@
   display: none;
 }
 
-.policy-sentences h2 {
+.policy-sentences h3 {
   padding-top: 30px;
   text-align: center;
   color: #00a99d;
 }
 
-.policy-sentences h2:first-child {
+.policy-sentences h3:first-child {
   padding-top: 0px;
   margin-top: 0px;
 }
@@ -74,7 +74,7 @@
   .policy-sentences {
     font-size: 16px;
   }
-  .policy-sentences h2 {
+  .policy-sentences h3 {
     font-size: 20px;
   }
 }
