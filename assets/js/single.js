@@ -88,6 +88,14 @@ function autoIndexCreation() {
   } catch (e) {}
 }
 
+// 呼び出し
+replaceStrong();
+autoAnchor();
+autoIndexCreation();
+// ヘッダーに背景色をつけて固定したので呼び出しをコメントアウト(2022/7/22)
+// headerLogoMobileControl();
+
+// 未使用
 // ヘッダーロゴ非表示制御(記事を読む際に邪魔になるため)
 function headerLogoMobileControl() {
   try {
@@ -106,9 +114,3 @@ function headerLogoMobileControl() {
     });
   } catch (e) {}
 }
-
-// 呼び出し
-replaceStrong();
-autoAnchor();
-autoIndexCreation();
-headerLogoMobileControl();
