@@ -89,6 +89,9 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+  .button-greenback {
+    font-size: 20px;
+  }
   hr {
     min-width: 100%;
   }
@@ -247,6 +250,10 @@ mobile-nav
   .mobile-hr {
     display: block;
   }
+  .menu-separetor {
+    color: #deb887;
+    font-weight: bold;
+  }
 }
 
 /* 
@@ -265,7 +272,7 @@ article
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -306,10 +313,14 @@ article
   text-align: center;
 }
 
+.article-new-list-container {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .article-new-list {
-  position: absolute;
-  bottom: 50px;
-  right: 100px;
+  margin-right: 50px;
 }
 
 /* モバイル用CSS */
@@ -322,6 +333,7 @@ article
     font-size: 36px;
   }
   .article-new-row {
+    height: auto;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -338,8 +350,11 @@ article
     width: 300px;
     font-size: 18px;
   }
+  .article-new-list-container {
+    justify-content: center;
+  }
   .article-new-list {
-    right: 130px;
+    margin-right: 0px;
   }
 }
 
