@@ -91,6 +91,8 @@ hr {
 @media screen and (max-width: 768px) {
   .button-greenback {
     font-size: 20px;
+    width: 175px;
+    height: 50px;
   }
   hr {
     min-width: 100%;
@@ -262,7 +264,7 @@ article
 
 .article-new {
   position: relative;
-  height: 950px;
+  height: 850px;
   width: 100%;
   min-width: 1000px;
 }
