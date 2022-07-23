@@ -18,6 +18,21 @@
       padding-left: 0px;
     }
 
+    .page-inside-hr {
+      width: 100%;
+      margin: 0px 0px 25px 0px;
+      border-radius: 5px;
+    }
+
+    .page-inside-hr.hr-reverse {
+      margin: 25px 0px 0px 0px;
+    }
+
+    .page-topics-container {
+      display: flex;
+      flex-direction: column;
+    }
+
     .page-topics {
       font-size: 36px;
       color: #00a99d;
@@ -30,6 +45,33 @@
     .item-name {
       color: #00a99d;
       font-weight: bold;
+    }
+
+    .certifications-button {
+      text-align: center;
+      text-decoration: underline;
+      color: #deb887;
+      cursor: pointer;
+    }
+
+    .certifications-button.--hidden::before {
+      content: '▼';
+    }
+
+    .certifications-button.--hidden::after {
+      content: '開く▼';
+    }
+
+    .certifications-button.--show::before {
+      content: '▲';
+    }
+
+    .certifications-button.--show::after {
+      content: '閉じる▲';
+    }
+
+    .certifications-list {
+      display: none;
     }
 
     .single-article-content-description li {
@@ -125,10 +167,6 @@
           このブログを書いているケンタロウという者です<br>
         </p>
         <p>
-          少し顔が濃いめで、毛の濃さに悩んで1年前から脱毛を始めた<?php echo (date('Y') - 1996); ?>歳のエンジニアです<br>
-          (2年後くらいには毛がだいぶなくなってツルツルになる予定🤣ww)
-        </p>
-        <p>
           このページでは僕の経歴や今までどんなことを考えてきて、これから何をしたいのか<br>
           などを紹介させていただきます！<br>
         </p>
@@ -136,34 +174,36 @@
           ぜひ、最後まで読んだいただけると嬉しいです☺️
         </p>
 
-        <hr>
-
         <h3 class="page-topics">このページのトピック</h3>
-        <p class="page-topic">
-          <a href="#my-profile">
-            1. ケンタロウのプロフィール
-          </a>
-        </p>
-        <p class="page-topic">
-          <a href="#my-job-experience">
-            2. 今まで経験した仕事
-          </a>
-        </p>
-        <p class="page-topic">
-          <a href="#reasons-to-choose-it">
-            3. IT業界での就職を選んだ理由
-          </a>
-        </p>
-        <p class="page-topic">
-          <a href="#about-my-future">
-            4. 今後どうしていきたいのか
-          </a>
-        </p>
-        <p class="page-topic">
-          <a href="#summary">
-            5. まとめ
-          </a>
-        </p>
+        <hr class="page-inside-hr">
+        <div class="page-topics-container">
+          <p class="page-topic">
+            <a href="#my-profile">
+              1. ケンタロウのプロフィール
+            </a>
+          </p>
+          <p class="page-topic">
+            <a href="#my-job-experience">
+              2. 今まで経験した仕事
+            </a>
+          </p>
+          <p class="page-topic">
+            <a href="#reasons-to-choose-it">
+              3. IT業界での就職を選んだ理由
+            </a>
+          </p>
+          <p class="page-topic">
+            <a href="#about-my-future">
+              4. 今後どうしていきたいのか
+            </a>
+          </p>
+          <p class="page-topic">
+            <a href="#summary">
+              5. まとめ
+            </a>
+          </p>
+        </div>
+        <hr class="page-inside-hr hr-reverse">
 
         <!-- プロフィール -->
         <h2 id="my-profile">1. ケンタロウのプロフィール</h2>
@@ -185,41 +225,46 @@
             <span class="item-name">大学の専攻:&nbsp;</span>英語
           </p>
           <p>
-            <span class="item-name">好きなもの:&nbsp;</span><br>
-            筋トレ、長風呂、ディズニー、StarWars、Marvelなどなど
+            <span class="item-name">好きなもの:&nbsp;</span>筋トレ、長風呂、ディズニー、StarWars、Marvelなどなど
+
           </p>
           <p>
-            <span class="item-name">今まで取得した資格:&nbsp;</span><br>
-          <ol>
-            <li>TOEIC 910点(2018年9月)</li>
-            <li>Python3 認定試験(2019年3月)</li>
-            <li>HTML5プロフェッショナル Lev1(2019年5月)</li>
-            <li>AWS クラウドプラクティショナー(2020年6月)</li>
-            <li>AWS ソリューションアーキテクト(2020年7月)</li>
-            <li>PHP7技術者認定試験 初級(2020年8月）</li>
-            <li>Oracle Certificated Java Programing Silver SE11 認定資格(2021年2月)</li>
-            <li>メンタルヘルス・マネジメント検定 3級(2021年3月)</li>
-            <li>メンタルヘルス・マネジメント検定 2級(2021年3月)</li>
-            <li>UML Lev1(2021年5月)</li>
-            <li>SEO検定 4級(2021年7月)</li>
-            <li>SEO検定 3級(2021年9月)</li>
-            <li>基本情報(2021年12月)</li>
-            <li>HTML5プロフェッショナル Lev2(2022年5月)</li>
-          </ol>
-          </p>
-          <p>
-            我ながら資格取得はかなり頑張っていると言って良いと思う😤ww<br>
-            (これからも3ヶ月に1つくらいは資格取りたいな〜)<br>
+            <span class="item-name">今まで取得した資格:&nbsp;</span>技術系の資格をたくさん
+          <p class="certifications-button --hidden">資格一覧を</p>
+          <div class="certifications-list">
+            <ol>
+              <li>TOEIC 910点(2018年9月)</li>
+              <li>Python3 認定試験(2019年3月)</li>
+              <li>HTML5プロフェッショナル Lev1(2019年5月)</li>
+              <li>AWS クラウドプラクティショナー(2020年6月)</li>
+              <li>AWS ソリューションアーキテクト(2020年7月)</li>
+              <li>PHP7技術者認定試験 初級(2020年8月）</li>
+              <li>Oracle Certificated Java Programing Silver SE11 認定資格(2021年2月)</li>
+              <li>メンタルヘルス・マネジメント検定 3級(2021年3月)</li>
+              <li>メンタルヘルス・マネジメント検定 2級(2021年3月)</li>
+              <li>UML Lev1(2021年5月)</li>
+              <li>SEO検定 4級(2021年7月)</li>
+              <li>SEO検定 3級(2021年9月)</li>
+              <li>基本情報(2021年12月)</li>
+              <li>HTML5プロフェッショナル Lev2(2022年5月)</li>
+            </ol>
+            <p>
+              我ながら資格取得はかなり頑張っていると言って良いと思う😤ww<br>
+              (これからも3ヶ月に1つくらいは資格取りたいな〜)<br>
+            </p>
+          </div>
           </p>
           <p>
             出身は愛知県の岡崎市ということろです！<br>
             最近は東海オンエアの人気で岡崎市が盛り上がっているとか、、<br>
-            実家に帰っても外で遊ばず東京に戻ってきてしまうので、一回ゆっくり岡崎観光してみたい
+            実家に帰っても外で遊ばず東京に戻ってきてしまうので、一回ゆっくり地元を回ってみたい今日この頃です
           </p>
           <p>
             中学生の頃に見たアベンジャーズで、キャプテン・アメリカに衝撃を受けて筋トレをやるようになりました！<br>
             コロナもだいぶ減ってきて、今年からジム再開したのでちょっとずキャプテン・アメリカに近づいている気がする、、🇺🇸<br>
+            (そう信じたいww)
           </p>
+
         </section>
 
         <!-- 職歴 -->
@@ -435,24 +480,62 @@
   <?php get_footer(); ?>
 
   <script>
-    const targets = document.querySelectorAll('.emphasize');
+    // 資格リストのアコーディオン処理
+    function certificationListAcordionControl() {
+      try {
+        // アコーディオン動作のトリガーとなる要素を取得
+        const certification_acordion_button = document.querySelector('.certifications-button');
+        // アコーディオンで表示を制御される要素を取得
+        const target = document.querySelector('.certifications-list');
 
-    function toggle_acordion() {
-      const result = this.classList.toggle('--show');
-      const parent = this.parentElement;
+        function toggle_certificaiton() {
+          // トグルによるクラス追加の結果をresultに入れる
+          // トグルは引数のクラス名がすでにある場合は、それを削除してfalseを返し、なければ追加してtrueを返す
+          const result = certification_acordion_button.classList.toggle('--show');
 
-      const sibiling = parent.nextElementSibling;
-      if (result) {
-        sibiling.style.display = "block";
-      } else {
-        sibiling.style.display = "none";
-      }
-
+          if (result) {
+            // 資格リストが非表示の状態でトグルした時の動作
+            certification_acordion_button.classList.remove('--hidden');
+            target.style.display = "block";
+          } else {
+            // 資格リストが表示の状態でトグルした時の動作
+            certification_acordion_button.classList.add('--hidden');
+            target.style.display = "none";
+          }
+        }
+        certification_acordion_button.addEventListener('click', toggle_certificaiton);
+      } catch (e) {}
     }
 
-    for (let i = 0; i < targets.length; i++) {
-      targets[i].addEventListener('click', toggle_acordion);
+
+    // 職歴のアコーディオン制御処理
+    function jobExperienceAcordionControl() {
+      try {
+        const targets = document.querySelectorAll('.emphasize');
+
+        function toggle_acordion() {
+          const result = this.classList.toggle('--show');
+          const parent = this.parentElement;
+
+          //同じ親要素の中にある直後の子要素を返す 
+          const sibiling = parent.nextElementSibling;
+          if (result) {
+            sibiling.style.display = "block";
+          } else {
+            sibiling.style.display = "none";
+          }
+
+        }
+
+        for (let i = 0; i < targets.length; i++) {
+          targets[i].addEventListener('click', toggle_acordion);
+        }
+      } catch (e) {}
     }
+
+    // 呼び出し
+    certificationListAcordionControl();
+    jobExperienceAcordionControl();
   </script>
 
 </body>
