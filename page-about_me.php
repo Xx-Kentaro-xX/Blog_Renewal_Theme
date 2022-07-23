@@ -18,6 +18,10 @@
       padding-left: 0px;
     }
 
+    .single-article-content-description {
+      margin-top: 30px;
+    }
+
     .page-inside-hr {
       width: 100%;
       margin: 0px 0px 25px 0px;
