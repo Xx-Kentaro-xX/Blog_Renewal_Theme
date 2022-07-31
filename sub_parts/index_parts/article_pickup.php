@@ -10,7 +10,12 @@
     <?php
     for ($i = 0; $i < $count; $i++) :
       // new WP_Queryが記事情報のオブジェクト(=投稿IDによって取得された特定の記事情報)
-      $query = new WP_Query(array('p' => $pickup_list[$i]));
+      $args = array(
+        'post_type' => array('post', 'tech', 'book', 'work'),
+        'p' => $pickup_list[$i],
+        'post_status' => 'publish'
+      );
+      $query = new WP_Query($args);
       if ($query->have_posts()) :
     ?>
         <?php $query->the_post() ?>

@@ -136,9 +136,9 @@ function thumbnail_check($postID)
 function get_pickup_array()
 {
   $query = array(
-    0 => 2830,
-    1 => 2586,
-    2 => 4088
+    0 => 4187,
+    1 => 4088,
+    2 => 4185
   );
 
   return $query;
